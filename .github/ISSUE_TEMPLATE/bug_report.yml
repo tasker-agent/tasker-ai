@@ -1,0 +1,75 @@
+name: Bug Report
+description: Report a bug or issue
+title: '[Bug] '
+labels: ['bug', 'triage']
+
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package Affected
+      description: Which package or component is affected?
+      options:
+        - '@tasker-ai/cli'
+        - '@tasker-ai/sdk'
+        - '@tasker-ai/skills'
+        - Web App
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version are you using?
+      placeholder: '0.1.0'
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? Describe the bug.
+      placeholder: Describe what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How do we reproduce this issue?
+      placeholder: |
+        1. First step
+        2. Second step
+        3. Third step
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Node version, browser, etc.
+      placeholder: |
+        OS: macOS 14.2
+        Node: v20.10.0
+        Browser: Chrome 120
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Add any relevant error messages, logs, or screenshots
+      placeholder: Paste logs or attach screenshots

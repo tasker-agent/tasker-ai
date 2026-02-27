@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+dist/
+build/
+.npm/
+package-lock.json
+yarn.lock
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+.npmrc
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Database
+postgres-data/
+*.sql
+
+# Replit-specific
+.cache/
+.config/
+.upm/
+.replit
+
+# Build outputs
+*.tgz
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+*.lcov

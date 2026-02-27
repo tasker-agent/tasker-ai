@@ -1,0 +1,40 @@
+{
+  "name": "tasker-ai",
+  "version": "0.1.0",
+  "description": "Web4 Operating System for Autonomous AI Agents on Base",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "packages/cli",
+    "packages/sdk",
+    "packages/skills"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "install": "npm install --workspaces",
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "test": "npm test --workspaces",
+    "publish": "bash scripts/publish.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tasker-ai/tasker-ai.git"
+  },
+  "keywords": [
+    "ai-agents",
+    "autonomous-agents",
+    "base",
+    "blockchain",
+    "web4",
+    "cli",
+    "sdk"
+  ],
+  "author": "Tasker AI",
+  "license": "MIT"
+}

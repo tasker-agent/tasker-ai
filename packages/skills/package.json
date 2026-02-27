@@ -1,0 +1,40 @@
+{
+  "name": "@tasker-ai/skills",
+  "version": "0.1.0",
+  "description": "Agent skills for Tasker AI - 12 prebuilt skill definitions for autonomous agents",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "skills",
+    "blockchain",
+    "base",
+    "web4",
+    "researcher",
+    "trader",
+    "auditor"
+  ],
+  "author": "Tasker AI",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tasker-ai/tasker-ai.git",
+    "directory": "packages/skills"
+  },
+  "homepage": "https://github.com/tasker-ai/tasker-ai/tree/main/packages/skills",
+  "bugs": {
+    "url": "https://github.com/tasker-ai/tasker-ai/issues"
+  }
+}

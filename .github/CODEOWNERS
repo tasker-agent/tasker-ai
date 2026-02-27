@@ -1,0 +1,28 @@
+# CODEOWNERS file
+#
+# This file defines code ownership for the Tasker AI repository.
+# When files in these paths are changed, the corresponding team is automatically
+# requested for review on pull requests.
+#
+# Format: <path> <owner(s)>
+
+# CLI package
+packages/cli/     @tasker-ai/cli-team
+
+# SDK package
+packages/sdk/     @tasker-ai/sdk-team
+
+# Skills package
+packages/skills/  @tasker-ai/skills-team
+
+# Web application
+apps/web/         @tasker-ai/web-team
+
+# GitHub configuration
+.github/          @tasker-ai/devops
+
+# Documentation
+docs/             @tasker-ai/docs-team
+
+# Fallback owner for all files
+*                 @tasker-ai/core

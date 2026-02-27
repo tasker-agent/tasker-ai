@@ -1,0 +1,37 @@
+{
+  "name": "@tasker-ai/sdk",
+  "version": "0.1.0",
+  "description": "JavaScript SDK for Tasker AI - Zero-dependency client for autonomous AI agents",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "sdk",
+    "blockchain",
+    "base",
+    "web4"
+  ],
+  "author": "Tasker AI",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tasker-ai/tasker-ai.git",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://github.com/tasker-ai/tasker-ai/tree/main/packages/sdk",
+  "bugs": {
+    "url": "https://github.com/tasker-ai/tasker-ai/issues"
+  }
+}

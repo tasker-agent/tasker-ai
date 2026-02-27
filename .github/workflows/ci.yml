@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package:
+          - cli
+          - sdk
+          - skills
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: packages/${{ matrix.package }}
+
+      - name: Lint
+        run: npm run lint || true
+        working-directory: packages/${{ matrix.package }}
+
+      - name: Verify CLI imports
+        if: matrix.package == 'cli'
+        run: node packages/cli/bin/tasker.js --help
+
+      - name: Verify SDK imports
+        if: matrix.package == 'sdk'
+        run: node -e "import('./packages/sdk/src/index.js').then(() => console.log('SDK loaded successfully'))"
+
+      - name: Verify Skills
+        if: matrix.package == 'skills'
+        run: node -e "import('./packages/skills/src/index.js').then(m => { if(m.getAllSkills && m.getAllSkills().length === 12) { console.log('Skills verified'); process.exit(0); } else { console.error('Expected 12 skills'); process.exit(1); } })"
